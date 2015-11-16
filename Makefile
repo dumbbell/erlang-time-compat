@@ -13,6 +13,8 @@ test: build
 clean:
 	rm -f $(MODULES)
 
+.NOTPARALLEL:
+
 time_compat_old.beam: ERLC_FLAGS = -DOLD_API
 time_compat_new.beam: ERLC_FLAGS = -DNEW_API
 time_compat.beam:
